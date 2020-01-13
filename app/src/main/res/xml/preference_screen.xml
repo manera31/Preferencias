@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Datos de conexión">
+
+        <EditTextPreference android:title="Usuario" android:summary="Indica tu usuario" android:key="user"/>
+        <EditTextPreference android:title="Contraseña" android:summary="Indica tu contraseña" android:key="pass"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Servicio">
+
+        <SwitchPreference android:title="Habilitar servicio" android:summary="El servicio se iniciará automáticamente" android:key="service"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Seguridad">
+
+        <CheckBoxPreference android:title="Utilizar cifrado" android:key="encryption"/>
+        <ListPreference
+            android:dialogTitle="Algoritmo de cifrado"
+            android:entries="@array/cifrados"
+            android:entryValues="@array/cifrados"
+            android:key="list"
+            android:title="Algoritmo de cifrado"
+            app:enabled="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
